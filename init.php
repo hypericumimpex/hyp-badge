@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: YITH WooCommerce Badge Management Premium
- * Plugin URI: https://yithemes.com/themes/plugins/yith-woocommerce-badges-management/
- * Description: <code><strong>YITH WooCommerce Badge Management</strong></code> allows you to highlight your products through custom badges, that show offers, discounts, and so on. You can use text badges, CSS badges, image badges and advanced badges to attract your customers. <a href="https://yithemes.com/" target="_blank">Find new awesome plugins on <strong>YITH</strong></a>
+ * Plugin Name: HYP Badge
+ * Plugin URI: https://github.com/hypericumimpex/hyp-badge/
+ * Description: <code><strong>HYP Badge</strong></code> allows you to highlight your products through custom badges, that show offers, discounts, and so on. You can use text badges, CSS badges, image badges and advanced badges to attract your customers.
  * Version: 1.3.16
  * Author: YITH
  * Author URI: https://yithemes.com/
@@ -15,20 +15,6 @@
  * @package YITH WooCommerce Badge Management
  * @version 1.3.16
  *
-/*  Copyright 2015  Your Inspiration Themes  (email : plugins@yithemes.com)
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License, version 2, as
-published by the Free Software Foundation.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 if ( !defined( 'ABSPATH' ) ) {
