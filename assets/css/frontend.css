@@ -99,6 +99,11 @@ span.onsale {
     position : static !important;
 }
 
+/* ----- Avada ----- */
+.fusion-menu-cart-items .yith-wcbm-badge {
+    display : none !important;
+}
+
 /* ----- Wishlist ----- */
 #yith-wcwl-form .yith-wcbm-badge {
     display : none !important;

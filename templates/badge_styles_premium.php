@@ -35,7 +35,7 @@ switch ( $type ) {
     case 'text':
     case 'custom':
         ?>
-        .yith-wcbm-badge-<?php echo $id_badge ?>
+        .yith-wcbm-badge-<?php echo $id_badge ?> .yith-wcbm-badge__wrap
         {
         <?php
 

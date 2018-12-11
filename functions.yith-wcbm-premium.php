@@ -601,6 +601,14 @@ if ( !function_exists( 'yith_wcbm_get_badges_premium' ) ) {
         if ( !$product )
             return '';
 
+        
+        if ( $product->is_type( 'variation' ) ) {
+            // prevent issues with some themes that prints each variation directly in Shop page
+            $product = wc_get_product( $product->get_parent_id() );
+            if ( !$product )
+                return '';
+        }
+
         $product_id     = $product->get_id();
         $badges_to_show = array();
         $badges_html    = '';

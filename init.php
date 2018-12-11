@@ -3,7 +3,7 @@
  * Plugin Name: HYP Badge
  * Plugin URI: https://github.com/hypericumimpex/hyp-badge/
  * Description: <code><strong>HYP Badge</strong></code> allows you to highlight your products through custom badges, that show offers, discounts, and so on. You can use text badges, CSS badges, image badges and advanced badges to attract your customers.
- * Version: 1.3.16
+ * Version: 1.3.18
  * Author: Romeo C.
  * Author URI: https://romeocovaci.com/
  * Text Domain: yith-woocommerce-badges-management
@@ -13,7 +13,7 @@
  *
  * @author  Romeo C.
  * @package HYP Badge
- * @version 1.3.16
+ * @version 1.3.18
  *
 */
 
