@@ -21,12 +21,14 @@ $text     = yith_wcbm_wpml_string_translate( 'yith-woocommerce-badges-management
 $css_text = yith_wcbm_wpml_string_translate( 'yith-woocommerce-badges-management', sanitize_title( $css_text ), $css_text );
 //-------------------
 
+$text     = apply_filters( 'yith_wcbm_text_badge_text', $text, $args );
+$css_text = apply_filters( 'yith_wcbm_css_badge_text', $css_text, $args );
 
 switch ( $type ) {
     case 'text':
     case 'custom':
         ?>
-        <div class='yith-wcbm-badge yith-wcbm-badge-custom yith-wcbm-badge-<?php echo $id_badge ?>' <?php echo $position_data_html ?>>
+        <div class='yith-wcbm-badge yith-wcbm-badge-custom yith-wcbm-badge-<?php echo $id_badge ?> yith-wcbm-badge--on-product-<?php echo $product_id ?>' <?php echo $position_data_html ?>>
             <div class='yith-wcbm-badge__wrap'>
                 <div class="yith-wcbm-badge-text"><?php echo $text ?></div>
             </div><!--yith-wcbm-badge__wrap-->
@@ -39,14 +41,14 @@ switch ( $type ) {
         if ( strlen( $image_url ) < 6 ) {
             $image_url = YITH_WCBM_ASSETS_URL . '/images/image-badge/' . $image_url;
         }
-        $image_url = str_replace( 'http://', '//', $image_url );
-        $image_url = str_replace( 'https://', '//', $image_url );
-        $image_url = apply_filters( 'yith_wcbm_image_badge_url', $image_url, $args );
-        $text      = '<img src="' . $image_url . '" alt="" />';
+        $image_url  = str_replace( 'http://', '//', $image_url );
+        $image_url  = str_replace( 'https://', '//', $image_url );
+        $image_url  = apply_filters( 'yith_wcbm_image_badge_url', $image_url, $args );
+        $image_html = '<img src="' . $image_url . '" alt="" />';
         ?>
-        <div class='yith-wcbm-badge yith-wcbm-badge-image yith-wcbm-badge-<?php echo $id_badge ?>' <?php echo $position_data_html ?>>
+        <div class='yith-wcbm-badge yith-wcbm-badge-image yith-wcbm-badge-<?php echo $id_badge ?> yith-wcbm-badge--on-product-<?php echo $product_id ?>' <?php echo $position_data_html ?>>
             <div class='yith-wcbm-badge__wrap'>
-                <?php echo $text ?>
+                <?php echo $image_html ?>
             </div><!--yith-wcbm-badge__wrap-->
         </div><!--yith-wcbm-badge-->
         <?php
@@ -55,7 +57,7 @@ switch ( $type ) {
     case 'css':
         $css_badge = isset( $css_badge ) ? $css_badge : 'css';
         ?>
-        <div class="yith-wcbm-badge yith-wcbm-badge-css yith-wcbm-badge-<?php echo $id_badge ?> yith-wcbm-badge-css-<?php echo $css_badge; ?> yith-wcbm-css-badge-<?php echo $id_badge ?>" <?php echo $position_data_html ?>>
+        <div class="yith-wcbm-badge yith-wcbm-badge-css yith-wcbm-badge-<?php echo $id_badge ?> yith-wcbm-badge--on-product-<?php echo $product_id ?> yith-wcbm-badge-css-<?php echo $css_badge; ?> yith-wcbm-css-badge-<?php echo $id_badge ?>" <?php echo $position_data_html ?>>
             <div class='yith-wcbm-badge__wrap'>
                 <div class="yith-wcbm-css-s1"></div>
                 <div class="yith-wcbm-css-s2"></div>

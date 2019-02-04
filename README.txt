@@ -2,6 +2,20 @@
 
 == Changelog ==
 
+= Version 1.3.19 - Released: 31 Jan 2019=
+
+* New - Support to WooCommerce 3.5.4
+* Fix - textdomain for some strings
+* Fix - timezone issue with starting and ending date
+* Fix - support to YITH WooCommerce Auctions
+* Fix - support to YITH WooCommerce Dynamic Pricing and Discounts
+* Update - plugin framework
+* Update - language files
+* Tweak - added CSS class to badges including the product ID
+* Tweak - pagination for categories in settings
+* Dev - added yith_wcbm_text_badge_text filter
+* Dev - added yith_wcbm_css_badge_text filter
+
 = Version 1.3.18 - Released: 05 Dec 2018 =
 
 * New -  support to WordPress 5.0

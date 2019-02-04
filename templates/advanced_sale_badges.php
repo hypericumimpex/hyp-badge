@@ -104,7 +104,6 @@ $badge_info    = (object) apply_filters( 'yith_wcbm_advanced_badge_info', array(
     'id'                => $id_badge,
     'advanced_badge_id' => $id_advanced_badge,
     'advanced_badge'    => $advanced_badge,
-    'percentual_sale'   => $sale_percentage, // wrong key! use sale_percentage; leaved for back compatibility
     'display_class'     => $display_class,
     'sale_percentage'   => $sale_percentage,
     'saved_display'     => $saved_display,
@@ -125,7 +124,7 @@ $badge_info    = (object) apply_filters( 'yith_wcbm_advanced_badge_info', array(
 ), $product );
 
 if ( $badge_info->show ): ?>
-    <div class="yith-wcbm-badge yith-wcbm-badge<?php echo $badge_info->advanced_badge_id ?> yith-wcbm-badge-advanced yith-wcbm-badge-advanced-<?php echo $badge_info->advanced_badge; ?> yith-wcbm-on-sale-badge<?php echo $badge_info->advanced_badge_id ?> <?php echo $badge_info->display_class ?>" <?php echo $position_data_html ?>>
+    <div class="yith-wcbm-badge yith-wcbm-badge<?php echo $badge_info->advanced_badge_id ?> yith-wcbm-badge--on-product-<?php echo $product_id?> yith-wcbm-badge-advanced yith-wcbm-badge-advanced-<?php echo $badge_info->advanced_badge; ?> yith-wcbm-on-sale-badge<?php echo $badge_info->advanced_badge_id ?> <?php echo $badge_info->display_class ?>" <?php echo $position_data_html ?>>
         <div class='yith-wcbm-badge__wrap'>
             <div class="yith-wcbm yith-wcbm-shape1"></div>
             <div class="yith-wcbm yith-wcbm-shape2"></div>
@@ -134,7 +133,7 @@ if ( $badge_info->show ): ?>
                 <div class="yith-wcbm yith-wcbm-simbol-sale-exclamation"><?php echo $badge_info->labels[ 'sale' ] ?></div>
                 <div class="yith-wcbm yith-wcbm-simbol-percent"><?php echo $badge_info->labels[ 'percentage' ] ?></div>
                 <div class="yith-wcbm yith-wcbm-simbol-off"><?php echo $badge_info->labels[ 'off' ] ?></div>
-                <div class="yith-wcbm yith-wcbm-sale-percent"><?php echo $badge_info->percentual_sale ?></div>
+                <div class="yith-wcbm yith-wcbm-sale-percent"><?php echo $badge_info->sale_percentage ?></div>
                 <?php if ( $badge_info->saved_display && $badge_info->saved_money > 0 ): ?>
                     <div class="yith-wcbm yith-wcbm-save"><?php echo sprintf( $badge_info->labels[ 'save_format' ], $badge_info->labels[ 'save' ], $badge_info->saved ); ?></div>
                 <?php endif; ?>

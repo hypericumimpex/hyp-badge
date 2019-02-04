@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Badge Management\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2018-11-19 14:28:08+00:00\n"
+"POT-Creation-Date: 2019-01-31 12:49:13+00:00\n"
 "PO-Revision-Date: 2018-11-19 15:28+0100\n"
 "Last-Translator: Pierre-Yves QUEMENER <contact@py-conseil.bzh>\n"
 "Language-Team: Your Inspiration Themes <info@yithemes.com>\n"
@@ -45,7 +45,8 @@ msgstr "Date de départ"
 msgid "Ending Date"
 msgstr "Date de fin"
 
-#: class.yith-wcbm-admin-premium.php:152 plugin-options/category-options.php:48
+#: class.yith-wcbm-admin-premium.php:152
+#: plugin-options/category-options.php:99
 msgid "Category Badges"
 msgstr "Badges de catégories"
 
@@ -62,8 +63,10 @@ msgstr "Choisir un badge"
 msgid "— No Change —"
 msgstr "— Pas de changement —"
 
-#: class.yith-wcbm-admin-premium.php:443 plugin-options/advanced-options.php:10
-#: plugin-options/auctions-options.php:9 plugin-options/category-options.php:8
+#: class.yith-wcbm-admin-premium.php:443
+#: plugin-options/advanced-options.php:10
+#: plugin-options/auctions-options.php:9
+#: plugin-options/category-options.php:10
 #: plugin-options/dynamic-pricing-options.php:9
 #: plugin-options/shipping-class-options.php:8
 msgid "None"
@@ -393,7 +396,7 @@ msgstr "Position"
 msgid "Auctions"
 msgstr "Enchères"
 
-#: includes/compatibility/class.yith-wcbm-dynamic-pricing-compatibility.php:103
+#: includes/compatibility/class.yith-wcbm-dynamic-pricing-compatibility.php:104
 msgid "Dynamic Pricing"
 msgstr "Dynamic Pricing"
 
@@ -405,7 +408,8 @@ msgstr ""
 "YITH Badges Management Premium est activé mais pas fonctionnel. Nécessite "
 "WooCommerce pour fonctionner."
 
-#: plugin-options/advanced-options.php:35 plugin-options/settings-options.php:8
+#: plugin-options/advanced-options.php:35
+#: plugin-options/settings-options.php:8
 msgid "General Options"
 msgstr "Options générales"
 
@@ -622,7 +626,13 @@ msgstr "Sélectionner les badges pour les statuts d’enchères"
 msgid "Select the badge for all auctions marked as \"%s\""
 msgstr "Sélectionnez le barge pour toutes les enchères marquées comme « %s »"
 
-#: plugin-options/category-options.php:63
+#: plugin-options/category-options.php:48
+msgid "%s category"
+msgid_plural "%s categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin-options/category-options.php:120
 msgid "Select the Badge for all products of category %s"
 msgstr "Sélectionnez le badge pour tous les produits de la catégorie : %s"
 
@@ -668,32 +678,32 @@ msgctxt "Admin:title of column in products table"
 msgid "Badge"
 msgstr "Badge"
 
-#: templates/advanced_sale_badges.php:116
+#: templates/advanced_sale_badges.php:115
 msgctxt "Text in badge: preserve lenght"
 msgid "On Sale"
 msgstr "PROMO"
 
-#: templates/advanced_sale_badges.php:117
+#: templates/advanced_sale_badges.php:116
 msgctxt "Text in badge: preserve lenght"
 msgid "Off"
 msgstr "Off"
 
-#: templates/advanced_sale_badges.php:119
+#: templates/advanced_sale_badges.php:118
 msgctxt "Text in badge: preserve lenght"
 msgid "Save"
 msgstr "Save"
 
-#: templates/advanced_sale_badges.php:121
+#: templates/advanced_sale_badges.php:120
 msgctxt "Text in badge: preserve lenght"
 msgid "Sale!"
 msgstr "SOLDE"
 
-#: templates/advanced_sale_badges.php:120
+#: templates/advanced_sale_badges.php:119
 msgctxt "Text in badge(preserve lenght): Save $9"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: templates/advanced_sale_badges.php:122
+#: templates/advanced_sale_badges.php:121
 msgctxt "Text in badge(preserve lenght): 9 $"
 msgid "%1$s%2$s"
 msgstr "%1$s%2$s"

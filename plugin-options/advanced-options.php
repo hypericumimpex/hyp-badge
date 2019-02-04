@@ -87,11 +87,11 @@ $advanced_options = array(
             'desc'      => __( 'Force the badge positioning through javascript', 'yith-woocommerce-badges-management' ),
             'default'   => 'no',
             'options'   => array(
-                'no'                   => __( 'No', 'yith-woocommerce-badge-management' ),
-                'single-product'       => __( 'Single Product', 'yith-woocommerce-badge-management' ),
-                'single-product-image' => __( 'Single Product Image', 'yith-woocommerce-badge-management' ),
-                'shop'                 => __( 'Shop Page', 'yith-woocommerce-badge-management' ),
-                'everywhere'           => __( 'Everywhere', 'yith-woocommerce-badge-management' ),
+                'no'                   => __( 'No', 'yith-woocommerce-badges-management' ),
+                'single-product'       => __( 'Single Product', 'yith-woocommerce-badges-management' ),
+                'single-product-image' => __( 'Single Product Image', 'yith-woocommerce-badges-management' ),
+                'shop'                 => __( 'Shop Page', 'yith-woocommerce-badges-management' ),
+                'everywhere'           => __( 'Everywhere', 'yith-woocommerce-badges-management' ),
             )
         ),
         'force-badge-positioning-timeout'          => array(

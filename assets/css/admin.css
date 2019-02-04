@@ -437,5 +437,51 @@ span#yith-wcbm-rotation-mode-change:hover {
 }
 
 .edit-php.post-type-product .column-yith_wcbm_badge {
-    width: 10%;
+    width : 10%;
+}
+
+#yith_wcbm_panel_category .pagination span {
+    margin : 0 3px;
+}
+
+#yith_wcbm_panel_category .pagination .navspan {
+    display     : inline-block;
+    min-width   : 17px;
+    border      : 1px solid #ddd;
+    padding     : 3px 5px 7px;
+    background  : #f7f7f7;
+    font-size   : 16px;
+    line-height : 1;
+    font-weight : 400;
+    text-align  : center;
+    color       : #a0a5aa;
+}
+
+#yith_wcbm_panel_category .pagination a {
+    text-decoration : none;
+    box-shadow      : none;
+    outline         : none;
+}
+
+#yith_wcbm_panel_category .pagination a .navspan {
+    border-color : #ccc;
+    background   : #e5e5e5;
+    color        : #0073aa;
+}
+
+#yith_wcbm_panel_category .pagination a:hover .navspan {
+    border-color : #5b9dd9;
+    color        : #fff;
+    background   : #00a0d2;
+}
+
+#yith_wcbm_panel_category .pagination .current-page input {
+    text-align  : center;
+    line-height : 1;
+    height      : 32px;
+}
+
+#yith_wcbm_panel_category .form-table .yith-plugin-fw-panel-wc-row.html:first-child th,
+#yith_wcbm_panel_category .form-table .yith-plugin-fw-panel-wc-row.html:first-child td {
+    padding-bottom : 0;
 }

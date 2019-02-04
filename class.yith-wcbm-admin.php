@@ -126,7 +126,7 @@ if ( !class_exists( 'YITH_WCBM_Admin' ) ) {
          */
         public function admin_action_duplicate_badge() {
             if ( empty( $_REQUEST[ 'post' ] ) ) {
-                wp_die( __( 'No badge to duplicate has been supplied!', 'yith-woocommerce-badge-management' ) );
+                wp_die( __( 'No badge to duplicate has been supplied!', 'yith-woocommerce-badges-management' ) );
             }
 
             $id = isset( $_REQUEST[ 'post' ] ) ? absint( $_REQUEST[ 'post' ] ) : '';
@@ -136,12 +136,12 @@ if ( !class_exists( 'YITH_WCBM_Admin' ) ) {
             $post = get_post( $id );
 
             if ( !$post || $post->post_type !== YITH_WCBM_Post_Types::$badge )
-                wp_die( sprintf( __( 'Error while duplicating badge: badge #%s not found', 'yith-woocommerce-badge-management' ), $id ) );
+                wp_die( sprintf( __( 'Error while duplicating badge: badge #%s not found', 'yith-woocommerce-badges-management' ), $id ) );
 
             $new_post = array(
                 'post_status' => $post->post_status,
                 'post_type'   => YITH_WCBM_Post_Types::$badge,
-                'post_title'  => $post->post_title . ' - ' . __( 'Copy', 'yith-woocommerce-badge-management' )
+                'post_title'  => $post->post_title . ' - ' . __( 'Copy', 'yith-woocommerce-badges-management' )
             );
 
             $new_post_id = wp_insert_post( $new_post );
@@ -182,8 +182,8 @@ if ( !class_exists( 'YITH_WCBM_Admin' ) ) {
                                                                       'post'      => $post->ID
                                                                ), admin_url() ), 'yith-wcbm-duplicate-badge_' . $post->ID );
 
-                $actions[ 'duplicate_badge' ] = '<a href="' . $duplicate_link . '" title="' . esc_attr__( 'Make a duplicate from this badge', 'yith-woocommerce-badge-management' )
-                    . '" rel="permalink">' . __( 'Duplicate', 'yith-woocommerce-badge-management' ) . '</a>';
+                $actions[ 'duplicate_badge' ] = '<a href="' . $duplicate_link . '" title="' . esc_attr__( 'Make a duplicate from this badge', 'yith-woocommerce-badges-management' )
+                    . '" rel="permalink">' . __( 'Duplicate', 'yith-woocommerce-badges-management' ) . '</a>';
             }
 
             return $actions;
@@ -314,7 +314,7 @@ if ( !class_exists( 'YITH_WCBM_Admin' ) ) {
         public function admin_enqueue_scripts() {
             $screen = get_current_screen();
 
-            if ( in_array( $screen->id, array( 'yith-wcbm-badge', 'edit-yith-wcbm-badge', 'product', 'edit-product' ) ) ) {
+            if ( in_array( $screen->id, array( 'yith-wcbm-badge', 'edit-yith-wcbm-badge', 'product', 'edit-product', 'yith-plugins_page_yith_wcbm_panel' ) ) ) {
                 wp_enqueue_style( 'yith_wcbm_admin_style', YITH_WCBM_ASSETS_URL . '/css/admin.css', array(), YITH_WCBM_VERSION );
             }
 
@@ -336,8 +336,8 @@ if ( !class_exists( 'YITH_WCBM_Admin' ) ) {
                 wp_localize_script( 'yith_wcbm_metabox_options', 'ajax_object', array( 'assets_url' => YITH_WCBM_ASSETS_URL, 'wp_ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 
                 $yith_wcbm_language = array(
-                    'slider' => __( 'Slider', 'yith-woocommerce-badge-management' ),
-                    'number' => __( 'Number', 'yith-woocommerce-badge-management' ),
+                    'slider' => __( 'Slider', 'yith-woocommerce-badges-management' ),
+                    'number' => __( 'Number', 'yith-woocommerce-badges-management' ),
                 );
 
                 wp_localize_script( 'yith_wcbm_metabox_options', 'yith_wcbm_language', $yith_wcbm_language );

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Badge Management\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2018-11-19 14:28:08+00:00\n"
-"PO-Revision-Date: 2018-12-05 14:31+0100\n"
+"POT-Creation-Date: 2019-01-31 12:49:13+00:00\n"
+"PO-Revision-Date: 2018-12-14 10:12+0100\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <info@yithemes.com>\n"
 "Language: it_IT\n"
@@ -45,7 +45,8 @@ msgstr "Data Inizio"
 msgid "Ending Date"
 msgstr "Data fine"
 
-#: class.yith-wcbm-admin-premium.php:152 plugin-options/category-options.php:48
+#: class.yith-wcbm-admin-premium.php:152
+#: plugin-options/category-options.php:99
 msgid "Category Badges"
 msgstr "Badge categoria"
 
@@ -62,8 +63,10 @@ msgstr "Seleziona badge"
 msgid "— No Change —"
 msgstr "— Nessuna modifica —"
 
-#: class.yith-wcbm-admin-premium.php:443 plugin-options/advanced-options.php:10
-#: plugin-options/auctions-options.php:9 plugin-options/category-options.php:8
+#: class.yith-wcbm-admin-premium.php:443
+#: plugin-options/advanced-options.php:10
+#: plugin-options/auctions-options.php:9
+#: plugin-options/category-options.php:10
 #: plugin-options/dynamic-pricing-options.php:9
 #: plugin-options/shipping-class-options.php:8
 msgid "None"
@@ -163,7 +166,7 @@ msgstr "Badge non trovato"
 
 #: class.yith-wcbm-post-types.php:46
 msgid "Badge not found in trash"
-msgstr "Badge nel cestino non trovato "
+msgstr "Badge non trovato nel cestino"
 
 #: functions.yith-wcbm-premium.php:29 functions.yith-wcbm.php:29
 msgid "Text Badge"
@@ -229,7 +232,7 @@ msgstr "Altezza"
 
 #: functions.yith-wcbm-premium.php:135
 msgid "Border Radius (pixel)"
-msgstr "Area del bordo (pixel)"
+msgstr "Border Radius (pixel)"
 
 #: functions.yith-wcbm-premium.php:166
 msgid "Padding (pixel)"
@@ -273,7 +276,7 @@ msgstr "Percentuale"
 
 #: functions.yith-wcbm-premium.php:327
 msgid "Amount"
-msgstr "Importo "
+msgstr "Importo"
 
 #: functions.yith-wcbm-premium.php:337
 msgid "Opacity and position"
@@ -309,7 +312,7 @@ msgstr "IMPOSTA MODALITÀ"
 
 #: functions.yith-wcbm-premium.php:400
 msgid "Flip Text"
-msgstr "Testo a specchio"
+msgstr "Rifletti testo"
 
 #: functions.yith-wcbm-premium.php:407
 msgid "Horizontally"
@@ -391,7 +394,7 @@ msgstr "Posizione"
 msgid "Auctions"
 msgstr "Auctions"
 
-#: includes/compatibility/class.yith-wcbm-dynamic-pricing-compatibility.php:103
+#: includes/compatibility/class.yith-wcbm-dynamic-pricing-compatibility.php:104
 msgid "Dynamic Pricing"
 msgstr "Dynamic Pricing"
 
@@ -403,7 +406,8 @@ msgstr ""
 "YITH WooCommerce Badge Management è attivato ma non operativo. Per "
 "funzionare richiede WooCommerce."
 
-#: plugin-options/advanced-options.php:35 plugin-options/settings-options.php:8
+#: plugin-options/advanced-options.php:35
+#: plugin-options/settings-options.php:8
 msgid "General Options"
 msgstr "Opzioni generali"
 
@@ -444,7 +448,7 @@ msgstr ""
 
 #: plugin-options/advanced-options.php:67
 msgid "Enable Shop Manager to edit these options"
-msgstr "Abilita il gestore del negozio alla modifica di queste opzioni"
+msgstr "Abilita lo shop manager alla modifica di queste opzioni"
 
 #: plugin-options/advanced-options.php:75
 msgid "Mobile Breakpoint"
@@ -485,7 +489,7 @@ msgstr "Ovunque"
 
 #: plugin-options/advanced-options.php:99
 msgid "Force Positioning Timeout"
-msgstr "Forza il timeout per il posizionamento"
+msgstr "Timeout per posizionamento forzato"
 
 #: plugin-options/advanced-options.php:102
 msgid "Number of milliseconds before force positioning"
@@ -493,12 +497,12 @@ msgstr "Numero di millisecondi prima di forzare il posizionamento"
 
 #: plugin-options/advanced-options.php:112
 msgid "Force Positioning On Scrolling in Mobile"
-msgstr "Forza il posizionamento sullo scorrimento su dispositivo mobile"
+msgstr "Forza il posizionamento allo scorrimento su dispositivo mobile"
 
 #: plugin-options/advanced-options.php:115
 msgid "If enabled, force positioning on scrolling in mobile devices"
 msgstr ""
-"Se attivata, forza il posizionamento sullo scorrimento su dispositivo mobile"
+"Se attivata, forza il posizionamento allo scorrimento su dispositivo mobile"
 
 #: plugin-options/advanced-options.php:130
 msgid "Automatic Badges"
@@ -608,9 +612,15 @@ msgstr "Seleziona i badge per gli stati dell'asta"
 
 #: plugin-options/auctions-options.php:42
 msgid "Select the badge for all auctions marked as \"%s\""
-msgstr "Seleziona il badge per tutte le aste contrassegnate come \"%s\" "
+msgstr "Seleziona il badge per tutte le aste contrassegnate come \"%s\""
 
-#: plugin-options/category-options.php:63
+#: plugin-options/category-options.php:48
+msgid "%s category"
+msgid_plural "%s categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin-options/category-options.php:120
 msgid "Select the Badge for all products of category %s"
 msgstr "Seleziona il badge per tutti i prodotti di categoria %s"
 
@@ -623,8 +633,8 @@ msgid ""
 "Select the Badge for Dynamic Pricing Rules. Please Note: you should create "
 "rules in %s before"
 msgstr ""
-"Seleziona il badge per Dynamic Pricing Rules. Nota bene: prima devi creare "
-"le regole in %s"
+"Seleziona il badge per le regole di Dynamic Pricing. Nota bene: prima devi "
+"creare le regole in %s"
 
 #: plugin-options/dynamic-pricing-options.php:36
 msgid "Dynamic Pricing Badges"
@@ -632,7 +642,9 @@ msgstr "Badge Dynamic Pricing"
 
 #: plugin-options/dynamic-pricing-options.php:50
 msgid "Select the Badge for all products of Dynamic Pricing Rule %s"
-msgstr "Seleziona il badge per i tutti i prodotti di Dynamic Pricing Rule %s"
+msgstr ""
+"Seleziona il badge per i tutti i prodotti a cui è applicata la regola %s di "
+"Dynamic Pricing"
 
 #: plugin-options/shipping-class-options.php:59
 msgid "Select the Badge for all products of shipping class \"%s\""
@@ -659,32 +671,32 @@ msgctxt "Admin:title of column in products table"
 msgid "Badge"
 msgstr "Badge"
 
-#: templates/advanced_sale_badges.php:116
+#: templates/advanced_sale_badges.php:115
 msgctxt "Text in badge: preserve lenght"
 msgid "On Sale"
-msgstr "In offerta"
+msgstr "Offerta"
 
-#: templates/advanced_sale_badges.php:117
+#: templates/advanced_sale_badges.php:116
 msgctxt "Text in badge: preserve lenght"
 msgid "Off"
-msgstr "Scontato"
+msgstr "Off"
 
-#: templates/advanced_sale_badges.php:119
+#: templates/advanced_sale_badges.php:118
 msgctxt "Text in badge: preserve lenght"
 msgid "Save"
-msgstr "Salva"
-
-#: templates/advanced_sale_badges.php:121
-msgctxt "Text in badge: preserve lenght"
-msgid "Sale!"
-msgstr "In vendita!"
+msgstr "Sconta"
 
 #: templates/advanced_sale_badges.php:120
+msgctxt "Text in badge: preserve lenght"
+msgid "Sale!"
+msgstr "Sale!"
+
+#: templates/advanced_sale_badges.php:119
 msgctxt "Text in badge(preserve lenght): Save $9"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: templates/advanced_sale_badges.php:122
+#: templates/advanced_sale_badges.php:121
 msgctxt "Text in badge(preserve lenght): 9 $"
 msgid "%1$s%2$s"
 msgstr "%1$s %2$s"

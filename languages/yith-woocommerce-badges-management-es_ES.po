@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YITH WooCommerce Badge Management\n"
 "Report-Msgid-Bugs-To: Your Inspiration Themes <plugins@yithemes.com>\n"
-"POT-Creation-Date: 2018-11-19 14:24:32+00:00\n"
-"PO-Revision-Date: 2018-11-19 15:27+0100\n"
+"POT-Creation-Date: 2019-01-31 12:49:13+00:00\n"
+"PO-Revision-Date: 2019-01-09 13:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: Your Inspiration Themes <info@yithemes.com>\n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 1.8.12\n"
 "X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
 "_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;"
 "esc_html_x:1,2c\n"
@@ -45,7 +45,8 @@ msgstr "Fecha de Inicio"
 msgid "Ending Date"
 msgstr "Fecha de Fin"
 
-#: class.yith-wcbm-admin-premium.php:152 plugin-options/category-options.php:48
+#: class.yith-wcbm-admin-premium.php:152
+#: plugin-options/category-options.php:99
 msgid "Category Badges"
 msgstr "Insignias de categoría"
 
@@ -62,8 +63,10 @@ msgstr "Seleccionar Insignia"
 msgid "— No Change —"
 msgstr "— Sin Cambio —"
 
-#: class.yith-wcbm-admin-premium.php:443 plugin-options/advanced-options.php:10
-#: plugin-options/auctions-options.php:9 plugin-options/category-options.php:8
+#: class.yith-wcbm-admin-premium.php:443
+#: plugin-options/advanced-options.php:10
+#: plugin-options/auctions-options.php:9
+#: plugin-options/category-options.php:10
 #: plugin-options/dynamic-pricing-options.php:9
 #: plugin-options/shipping-class-options.php:8
 msgid "None"
@@ -373,7 +376,7 @@ msgstr "Centro"
 
 #: functions.yith-wcbm-premium.php:505
 msgid "Scale (on mobile)"
-msgstr ""
+msgstr "Escala (en móvil)"
 
 #: functions.yith-wcbm-premium.php:520
 msgid "Use Drag and Drop for positioning"
@@ -391,7 +394,7 @@ msgstr "Posición"
 msgid "Auctions"
 msgstr "Subastas"
 
-#: includes/compatibility/class.yith-wcbm-dynamic-pricing-compatibility.php:103
+#: includes/compatibility/class.yith-wcbm-dynamic-pricing-compatibility.php:104
 msgid "Dynamic Pricing"
 msgstr "Tarificación Dinámica"
 
@@ -403,7 +406,8 @@ msgstr ""
 "YITH WooCommerce Badge Management está habilitado pero no es efectivo. "
 "Requiere Woocommerce para funcionar."
 
-#: plugin-options/advanced-options.php:35 plugin-options/settings-options.php:8
+#: plugin-options/advanced-options.php:35
+#: plugin-options/settings-options.php:8
 msgid "General Options"
 msgstr "Opciones Generales"
 
@@ -450,11 +454,11 @@ msgstr "Activa el gerente de tienda para editar estas opciones"
 
 #: plugin-options/advanced-options.php:75
 msgid "Mobile Breakpoint"
-msgstr ""
+msgstr "Punto de quiebre del móvil"
 
 #: plugin-options/advanced-options.php:78
 msgid "Set the mobile breakpoint. Default: %s"
-msgstr ""
+msgstr "Establecer el punto de ruptura en el móvil. Por defecto: %s"
 
 #: plugin-options/advanced-options.php:84
 msgid "Force Positioning"
@@ -474,9 +478,8 @@ msgid "Single Product"
 msgstr "Producto Único"
 
 #: plugin-options/advanced-options.php:92
-#, fuzzy
 msgid "Single Product Image"
-msgstr "Producto Único"
+msgstr "Imagen de producto individual"
 
 #: plugin-options/advanced-options.php:93
 msgid "Shop Page"
@@ -495,13 +498,14 @@ msgid "Number of milliseconds before force positioning"
 msgstr "Número de milisegundos antes de forzar el posicionamiento"
 
 #: plugin-options/advanced-options.php:112
-#, fuzzy
 msgid "Force Positioning On Scrolling in Mobile"
-msgstr "Forzar posicionamiento de tiempo agotado"
+msgstr "Forzar posicionamiento al hacer scroll en el móvil"
 
 #: plugin-options/advanced-options.php:115
 msgid "If enabled, force positioning on scrolling in mobile devices"
 msgstr ""
+"Si está activado, fuerza el posicionamiento al hacer scroll en aparatos "
+"móviles"
 
 #: plugin-options/advanced-options.php:130
 msgid "Automatic Badges"
@@ -614,7 +618,13 @@ msgstr "Selecciona las insignias para los estados de la subasta"
 msgid "Select the badge for all auctions marked as \"%s\""
 msgstr "Selecciona la insignia para todas las subastas marcada como ‘’%s’’"
 
-#: plugin-options/category-options.php:63
+#: plugin-options/category-options.php:48
+msgid "%s category"
+msgid_plural "%s categories"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugin-options/category-options.php:120
 msgid "Select the Badge for all products of category %s"
 msgstr "Selecciona la insignia para todos los productos de la categoría %s"
 
@@ -654,38 +664,44 @@ msgid ""
 "target=\"_blank\">Get more plugins for your e-commerce shop on <strong>YITH</"
 "strong></a>"
 msgstr ""
+"<code><strong>YITH WooCommerce Badge Management</strong></code> te permite "
+"destacar tus productos a través de insignias personalizadas, muestra "
+"ofertas, descuentos y más. Puedes usar las insignias de texto, de CSS, "
+"insignias de imagen and e insignias avanzadas para atraer a tus clientes. <a "
+"href=\"https://yithemes.com/\" target=\"_blank\">Obtén más plugins para tu e-"
+"commerce en <strong>YITH</strong></a>"
 
 #: class.yith-wcbm-admin-premium.php:383
 msgctxt "Admin:title of column in products table"
 msgid "Badge"
 msgstr "Badge"
 
-#: templates/advanced_sale_badges.php:116
+#: templates/advanced_sale_badges.php:115
 msgctxt "Text in badge: preserve lenght"
 msgid "On Sale"
 msgstr "En rebaja"
 
-#: templates/advanced_sale_badges.php:117
+#: templates/advanced_sale_badges.php:116
 msgctxt "Text in badge: preserve lenght"
 msgid "Off"
 msgstr "Desc"
 
-#: templates/advanced_sale_badges.php:119
+#: templates/advanced_sale_badges.php:118
 msgctxt "Text in badge: preserve lenght"
 msgid "Save"
 msgstr "Ahorra"
 
-#: templates/advanced_sale_badges.php:121
+#: templates/advanced_sale_badges.php:120
 msgctxt "Text in badge: preserve lenght"
 msgid "Sale!"
 msgstr "¡En descuento!"
 
-#: templates/advanced_sale_badges.php:120
+#: templates/advanced_sale_badges.php:119
 msgctxt "Text in badge(preserve lenght): Save $9"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
-#: templates/advanced_sale_badges.php:122
+#: templates/advanced_sale_badges.php:121
 msgctxt "Text in badge(preserve lenght): 9 $"
 msgid "%1$s%2$s"
 msgstr "%1$s%2$s"

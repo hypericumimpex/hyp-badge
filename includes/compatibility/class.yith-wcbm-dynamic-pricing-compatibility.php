@@ -70,21 +70,22 @@ class YITH_WCBM_Dynamic_Pricing_Compatibility {
     }
 
     /**
-     * @param string $badge_html
-     * @param int    $product_id
+     * @param string     $badge_html
+     * @param WC_Product $product
      *
      * @return string
      */
-    public function add_dynamic_pricing_badges( $badge_html, $product_id ) {
-        $rules = $this->get_rules();
+    public function add_dynamic_pricing_badges( $badge_html, $product ) {
+        $rules   = $this->get_rules();
+        $product = wc_get_product( $product );
 
-        if ( !empty( $rules ) ) {
+        if ( $product && !empty( $rules ) ) {
             foreach ( $rules as $rule_id => $rule ) {
                 $rule_badge         = get_option( 'yith-wcbm-dynamic-pricing-badge-' . $rule_id );
-                $product_is_in_rule = $this->product_is_in_rule( $product_id, $rule );
+                $product_is_in_rule = $this->product_is_in_rule( $product->get_id(), $rule );
 
                 if ( !empty( $rule_badge ) && $rule_badge != 'none' && $product_is_in_rule ) {
-                    $badge_html .= yith_wcbm_get_badge_premium( $rule_badge, $product_id );
+                    $badge_html .= yith_wcbm_get_badge_premium( $rule_badge, $product->get_id() );
                 }
             }
         }

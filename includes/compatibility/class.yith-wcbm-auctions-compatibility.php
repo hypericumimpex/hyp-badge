@@ -45,12 +45,12 @@ class YITH_WCBM_Auctions_Compatibility {
 
     /**
      * @param string $badge_html
-     * @param int    $product_id
+     * @param WC_Product    $product
      *
      * @return string
      */
-    public function add_auction_badges( $badge_html, $product_id ) {
-        $product = wc_get_product( $product_id );
+    public function add_auction_badges( $badge_html, $product ) {
+        $product = wc_get_product( $product );
         if ( $product && $product->is_type( 'auction' ) ) {
             $auction_status = $product->get_auction_status();
 
@@ -73,7 +73,7 @@ class YITH_WCBM_Auctions_Compatibility {
             $auction_badge = get_option( 'yith-wcbm-auction-badge-' . $status );
 
             if ( !empty( $auction_badge ) && $auction_badge != 'none' ) {
-                $badge_html .= yith_wcbm_get_badge_premium( $auction_badge, $product_id );
+                $badge_html .= yith_wcbm_get_badge_premium( $auction_badge, $product->get_id() );
             }
         }
 

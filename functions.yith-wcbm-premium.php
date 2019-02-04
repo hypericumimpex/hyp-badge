@@ -320,11 +320,11 @@ if ( !function_exists( 'yith_wcbm_metabox_options_content_premium' ) ) {
                                 <td class="table-content">
                                     <input type="radio" id="yith-wcbm-advanced-display-percentage" name="_badge_meta[advanced_display]"
                                            value="percentage" <?php checked( $advanced_display === 'percentage', true, true ); ?> >
-                                    <label for="yith-wcbm-advanced-display-percentage"><?php _e( 'Percentage', 'yith-woocommerce-badge-management' ); ?></label>
+                                    <label for="yith-wcbm-advanced-display-percentage"><?php _e( 'Percentage', 'yith-woocommerce-badges-management' ); ?></label>
                                     <br/>
                                     <input type="radio" id="yith-wcbm-advanced-display-amount" name="_badge_meta[advanced_display]"
                                            value="amount" <?php checked( $advanced_display === 'amount', true, true ); ?>>
-                                    <label for="yith-wcbm-advanced-display-amount"><?php _e( 'Amount', 'yith-woocommerce-badge-management' ); ?></label>
+                                    <label for="yith-wcbm-advanced-display-amount"><?php _e( 'Amount', 'yith-woocommerce-badges-management' ); ?></label>
                                 </td>
                             </tr>
                         </table>
@@ -382,14 +382,14 @@ if ( !function_exists( 'yith_wcbm_metabox_options_content_premium' ) ) {
                                             </div>
                                         </td>
                                         <td>
-                                            <span id="yith-wcbm-rotation-mode-change" data-value="slider"><?php _e( 'Number', 'yith-woocommerce-badge-management' ) ?></span>
+                                            <span id="yith-wcbm-rotation-mode-change" data-value="slider"><?php _e( 'Number', 'yith-woocommerce-badges-management' ) ?></span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th><?php _e( 'X', 'yith-woocommerce-badge-management' ) ?></th>
-                                        <th><?php _e( 'Y', 'yith-woocommerce-badge-management' ) ?></th>
-                                        <th><?php _e( 'Z', 'yith-woocommerce-badge-management' ) ?></th>
-                                        <th><?php _e( 'SET MODE', 'yith-woocommerce-badge-management' ) ?></th>
+                                        <th><?php _e( 'X', 'yith-woocommerce-badges-management' ) ?></th>
+                                        <th><?php _e( 'Y', 'yith-woocommerce-badges-management' ) ?></th>
+                                        <th><?php _e( 'Z', 'yith-woocommerce-badges-management' ) ?></th>
+                                        <th><?php _e( 'SET MODE', 'yith-woocommerce-badges-management' ) ?></th>
                                     </tr>
                                 </table>
 
@@ -601,7 +601,7 @@ if ( !function_exists( 'yith_wcbm_get_badges_premium' ) ) {
         if ( !$product )
             return '';
 
-        
+
         if ( $product->is_type( 'variation' ) ) {
             // prevent issues with some themes that prints each variation directly in Shop page
             $product = wc_get_product( $product->get_parent_id() );
@@ -695,11 +695,13 @@ if ( !function_exists( 'yith_wcbm_get_badges_premium' ) ) {
         $product_badge_visible = true;
 
         if ( $badge_ids ) {
+            $today_midnight = strtotime( 'midnight', current_time( 'timestamp', false ) );
+
             // check for Start Date
-            if ( !empty( $start_date ) && strtotime( $start_date ) > strtotime( 'now midnight' ) )
+            if ( !empty( $start_date ) && strtotime( $start_date ) > $today_midnight )
                 $product_badge_visible = false;
             // check for End Date
-            if ( !empty( $end_date ) && strtotime( $end_date ) < strtotime( 'now midnight' ) )
+            if ( !empty( $end_date ) && strtotime( $end_date ) < $today_midnight )
                 $product_badge_visible = false;
 
             if ( $product_badge_visible ) {
@@ -919,7 +921,7 @@ if ( !function_exists( 'yith_wcbm_get_transform_origin_by_positions' ) ) {
             $x = 'left';
         }
 
-        if ( strpos( $left,'calc' ) === 0 || strpos( $right,  'calc' ) === 0 ) {
+        if ( strpos( $left, 'calc' ) === 0 || strpos( $right, 'calc' ) === 0 ) {
             $x = 'center';
         }
 
